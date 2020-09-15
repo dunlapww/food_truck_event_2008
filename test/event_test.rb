@@ -16,7 +16,7 @@ class EventTest < Minitest::Test
     assert_equal [], event.food_trucks
   end
 
-  def test_
+  def test_it_can_add_food_trucks
     event = Event.new("South Pearl Street Farmers Market")
     food_truck1 = FoodTruck.new("Rocky Mountain Pies")
     item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
