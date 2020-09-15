@@ -17,6 +17,8 @@ class FoodTruckTest < Minitest::Test
   end
 
   def test_it_can_check_stock
+    item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
     assert_equal 0, food_truck.check_stock(item1)
   end
 end
