@@ -22,4 +22,26 @@ class Event
     end
   end
 
+  def total_inventory
+    #yep, this isn't working.  I've no idea why not. I've worked on it for an hour
+    #Everything I can find on google seems to indicate this
+    #should work.  It's probably because i'm not initializing correctly.
+    #well, whatever, guess I'll learn in the review.
+    total_inventory = {}
+    @food_trucks.each do |food_truck|
+      food_truck.inventory.each do |item|
+        if total_inventory[item].nil?
+          total_inventory[item][:quantity] = item[1]
+          total_inventory[item][:food_truck] = [food_truck]
+        else
+          total_inventory[item][:quantity] += item[1]
+          total_inventory[item][:food_truck] << food_truck
+        end
+      end
+    end
+    total_inventory
+  end
+
+
+
 end

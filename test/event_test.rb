@@ -81,7 +81,7 @@ class EventTest < Minitest::Test
       assert_equal expected, event.food_trucks_that_sell(item4)
     end
 
-    def test_
+    def test_it_can_calc_total_inventory
       event = Event.new("South Pearl Street Farmers Market")
       item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
       item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
