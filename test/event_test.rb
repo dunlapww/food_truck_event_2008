@@ -77,6 +77,8 @@ class EventTest < Minitest::Test
       event.add_food_truck(food_truck3)
       expected = [food_truck1, food_truck3]
       assert_equal expected, event.food_trucks_that_sell(item1)
+      expected = [food_truck2]
+      assert_equal expected, event.food_trucks_that_sell(item4)
     end
 
 
