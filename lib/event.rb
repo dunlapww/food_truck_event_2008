@@ -27,9 +27,10 @@ class Event
     #Everything I can find on google seems to indicate this
     #should work.  It's probably because i'm not initializing correctly.
     #well, whatever, guess I'll learn in the review.
+    #oh...at 2:57 i realized inventory is a hash and need a second argument...welp next time.
     total_inventory = {}
     @food_trucks.each do |food_truck|
-      food_truck.inventory.each do |item|
+      food_truck.inventory.each do |item, details|
         if total_inventory[item].nil?
           total_inventory[item][:quantity] = item[1]
           total_inventory[item][:food_truck] = [food_truck]
