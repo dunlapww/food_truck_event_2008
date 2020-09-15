@@ -5,4 +5,5 @@ class FoodTruck
     @name = name
     @inventory = {}
   end
+
 end
